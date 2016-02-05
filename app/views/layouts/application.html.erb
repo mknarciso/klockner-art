@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+  <meta charset="utf-8"/>
+  <title>Irineide Kl&ouml;ckner - Arte Abstrata</title>
+  <meta name="fb_admins_meta_tag" content="klockner.art"/>
+  <meta name="keywords" content="Pintura, action, arte, decora&ccedil;&atilde;o, em, interior, obras, painting, pollock, tela"/>
+  <meta name="description" content="Em sua arte Irineide expressa a beleza da vida, em todos seus pormenores e complexidades, na uni&atilde;o dos tra&ccedil;os aparentemente desconexos se criam momentos &uacute;nicos."/>
+   <link rel="canonical" href="http://www.klockner-art.com/"/>
+  <meta property="og:title" content="Irineide Kl&ouml;ckner - Arte Abstrata"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://www.klockner-art.com/"/>
+  <meta property="og:image" content="https://static.wixstatic.com/media/7d9310_2e4b92ab0cb94eefb3acf54e283c2128.jpg"/>
+  <meta property="og:site_name" content="Irineide Kl&ouml;ckner - Arte Abstrata"/>
+  <meta property="fb:admins" content="klockner.art"/>
+  <meta property="og:description" content="Em sua arte Irineide expressa a beleza da vida, em todos seus pormenores e complexidades, na uni&atilde;o dos tra&ccedil;os aparentemente desconexos se criam momentos &uacute;nicos."/>
+</head>
+<body>
+  
+<%= render 'layouts/navigation' %>
+<%= yield %>
+<%= render 'layouts/footer' %>
+
+</body>
+</html>
