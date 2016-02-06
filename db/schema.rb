@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160206144357) do
+ActiveRecord::Schema.define(version: 20160206212739) do
 
   create_table "quadros", force: :cascade do |t|
     t.integer  "num"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20160206144357) do
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
   end
 
 end
