@@ -1,0 +1,22 @@
+<nav class="navbar navbar-ik">
+  <div class="container">
+    <div class="navbar-brand col-sm-3">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png", id:"logo_img" %>
+      <% end %>
+    </div>
+    <div class="my-nav col-sm-8">
+        <%= link_to 'Galeria', quadros_path, class: "menu-item" %>
+        |
+        <%= link_to 'Sobre', sobre_path , class: "menu-item" %>
+        |
+        <%= link_to 'Contato', "#", class: "menu-item" %>
+    </div>
+    <div class="col-sm-1 my-nav">
+        <%= link_to "https://www.facebook.com/klockner.art" do %>
+            <%= image_tag("facebook.png", class: "face") %>
+        <% end %>
+
+    </div>
+  </div>
+</nav>

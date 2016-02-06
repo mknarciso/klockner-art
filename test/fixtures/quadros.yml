@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num: 1
+  alt: 1
+  larg: 1
+  tec: MyString
+  price: 1
+  ano: 1
+  onde: 1
+  img: MyString
+
+two:
+  num: 1
+  alt: 1
+  larg: 1
+  tec: MyString
+  price: 1
+  ano: 1
+  onde: 1
+  img: MyString

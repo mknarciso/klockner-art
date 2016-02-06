@@ -1,2 +1,135 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+    background-image: asset-url('bg.jpg');
+    background-color: #cccccc;
+    background-repeat: repeat;
+}
+
+.carousel {
+    overflow:hidden;
+}
+
+.carousel-image {
+    height: 400px;
+    vertical-align: middle;
+}
+
+#logo_img {
+    height: 110px;
+    margin-top: -14px;
+}
+
+.navbar-ik {
+    background-color:#000000;
+    opacity: 0.5;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 87px;
+    border-radius: 0px;
+}
+
+.navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.my-foot {
+    background-color:#000000;
+    opacity: 0.5;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 0px;
+    color: white;
+    text-align: center;
+}
+
+
+.my-nav {
+    height: 30px;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+}
+
+.menu-item {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+a.menu-item {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.menu-item:visited {
+    color: #ffffff;
+}
+
+a.menu-item:hover {
+    color: #ffe066;
+}
+#home-carousel {
+    height: 500px;
+}
+#myCarousel {
+    height: 550px;
+}
+.face {
+    height: 30px;
+}
+
+.about-header {
+    height: 280px;
+    overflow:hidden;
+    background-image: asset-url('about.jpg');
+}
+
+.about-body {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.gallery-body {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.picture {
+
+    margin-top: -160px;
+    border: 30px solid white;
+    width: 100%;
+}
+
+.carousel-control { 
+    background: none !important; 
+    filter: none !important; 
+    progid:none !important; 
+    
+}
+
+.carousel-img {
+    max-height: 550px;
+}
+
+.show-image {
+    max-width: 100%;
+}
+
+.carousel-caption-bg{
+    background-color: rgba(0,0,0,0.7);
+}
+.carousel .carousel-caption { visibility: hidden; }
+.carousel:hover .carousel-caption { visibility: visible; }

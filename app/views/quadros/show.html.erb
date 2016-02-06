@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <center><strong>Composição #<%= @quadro.num %> (<%= @quadro.ano %>)</strong></center>
+  </div>
+  <div class="panel-body ">
+    <center>
+      <%= link_to(@quadro) do %>
+        <%= image_tag @quadro.foto.url(:large), class:"show-image" %>
+      <% end %>
+    </center>
+  </div>
+  <div class="panel-footer ">
+    <center>
+      <%= @quadro.alt %>cm x <%= @quadro.larg %>cm - <%= @quadro.tec %>
+    </center>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_quadro_path(@quadro) %> |
+<%= link_to 'Back', quadros_path %>

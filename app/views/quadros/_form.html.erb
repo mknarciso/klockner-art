@@ -1,0 +1,53 @@
+<%= form_for @quadro, :html => { :multipart => true }  do |f| %>
+  <% if @quadro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quadro.errors.count, "error") %> prohibited this quadro from being saved:</h2>
+
+      <ul>
+      <% @quadro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :num %><br>
+    <%= f.number_field :num %>
+  </div>
+  <div class="field">
+    <%= f.label :alt %><br>
+    <%= f.number_field :alt %>
+  </div>
+  <div class="field">
+    <%= f.label :larg %><br>
+    <%= f.number_field :larg %>
+  </div>
+  <div class="field">
+    <%= f.label :tec %><br>
+    <%= f.text_field :tec %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :ano %><br>
+    <%= f.number_field :ano %>
+  </div>
+  <div class="field">
+    <%= f.label :onde %><br>
+    <%= f.number_field :onde %>
+  </div>
+  <div class="field">
+    <%= f.label :img %><br>
+    <%= f.text_field :img %>
+  </div>
+  <div class="field">
+    <%= f.file_field :foto %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

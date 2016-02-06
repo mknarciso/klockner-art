@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-    root 'pages#home'
-    get 'home', to: 'pages#home'
+  resources :quadros
+  root 'pages#home'
+  get 'home', to: 'pages#home'
+  get 'sobre', to: 'pages#sobre'
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
