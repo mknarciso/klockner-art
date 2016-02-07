@@ -17,8 +17,6 @@ Rails.application.configure do
   # MAILER
   config.action_mailer.default_url_options = { :host => 'klockner-art.herokuapp.com' }
   
-  ActionView::Template::Error: Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true
-
   Rails.application.routes.default_url_options[:host] = 'klockner-art.herokuapp.com'
   
   config.action_mailer.delivery_method = :smtp
