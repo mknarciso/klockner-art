@@ -137,3 +137,19 @@ a.menu-item:hover {
 .vcenter {
     vertical-align: middle;
 }
+
+.corner {
+    position: absolute;
+    float: right;
+    top: -5px;
+    right: 10px;
+}
+.table td {
+   text-align: center;   
+   vertical-align: middle;
+}
+
+.table th {
+   text-align: center;   
+   vertical-align: middle;
+}

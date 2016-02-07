@@ -49,10 +49,14 @@
     <% @quadros.where(galeria: true).sort_by{|item| item['num']}.reverse_each do |quadro| %>
     <div class="col-sm-3">
       <div class="panel panel-default">
+        
         <div class="panel-heading">
           <center><strong>Composição #<%= quadro.num %> (<%= quadro.ano %>)</strong></center>
         </div>
         <div class="panel-body ">
+          <% if !quadro.vendido %>
+            <span class="label label-success corner">Disponível</span>
+          <% end %>
           <center>
             <%= link_to(quadro) do %>
               <%= image_tag quadro.foto.url(:square), class:"show-image"  %>

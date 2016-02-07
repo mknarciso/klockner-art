@@ -41,6 +41,14 @@
       <%= f.check_box :galeria %>
     </div>
     <div class="field">
+      <%= f.label :vendido %><br>
+      <%= f.check_box :vendido %>
+    </div>
+    <div class="field">
+      <%= f.label :link %><br>
+      <%= f.text_field :link %>
+    </div>
+    <div class="field">
       <%= f.label :local %><br>
       <%= f.collection_select :local_id, @locais, :id, :name, {include_blank: true}, {multiple: false} %>
     </div>

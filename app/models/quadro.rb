@@ -4,7 +4,7 @@ class Quadro < ActiveRecord::Base
     
     has_attached_file :foto, styles: {
         large: '1600x800>',
-        medium: '300x300>',
+        medium: '500x500>',
         small: '140x140>',
         square: '300x300#',
         thumb: '64x64#'

@@ -76,6 +76,6 @@ class QuadrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quadro_params
-      params.require(:quadro).permit(:num, :alt, :larg, :tec, :price, :ano, :local_id, :galeria, :foto, local_attributes: [:id, :name, :city, :desc])
+      params.require(:quadro).permit(:num, :alt, :larg, :tec, :price, :ano, :local_id, :galeria, :vendido, :link, :foto, local_attributes: [:id, :name, :city, :desc])
     end
 end

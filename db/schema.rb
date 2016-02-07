@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160206235135) do
+ActiveRecord::Schema.define(version: 20160207134325) do
 
   create_table "locals", force: :cascade do |t|
     t.string   "name"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20160206235135) do
     t.datetime "foto_updated_at"
     t.integer  "local_id"
     t.boolean  "galeria",           default: true
+    t.boolean  "vendido",           default: false
+    t.string   "link"
   end
 
   create_table "users", force: :cascade do |t|
