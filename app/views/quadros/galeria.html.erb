@@ -1,0 +1,73 @@
+<div class="container">
+  
+  <p id="notice"><%= notice %></p>
+ 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <% i=0 %>
+      <% @quadros.where(galeria: true).sort_by{|item| item['num']}.reverse_each do |quadro| %>
+        <li data-target="#gallery-corousel" data-slide-to="<%= i %>" <%= raw 'class="active"' if i==0 %>></li>
+        <% i=i+1 %>
+      <% end %>
+    </ol>
+  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <% i=0 %>
+      <% @quadros.where(galeria: true).sort_by{|item| item['num']}.reverse_each do |quadro| %>
+        <div class="item <%= "active" if i==0 %>">
+          <%= link_to quadro do %>
+            <center><%= image_tag quadro.foto.url(:large), class: "carousel-img" %></center>
+            
+          <% end %>
+          <div class="carousel-caption">
+            <div class="carousel-caption-bg col-sm-6 col-sm-offset-3">
+              
+                <strong>Composição #<%= quadro.num %> (<%= quadro.ano %>)</strong></br>
+                <%= quadro.alt %>cm x <%= quadro.larg %>cm - <%= quadro.tec %>
+              
+            </div>
+          </div>
+        </div>
+        <% i=i+1 %>
+      <% end %>
+      
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
+  <div class="container col-sm-12 gallery-body">
+    <% @quadros.where(galeria: true).sort_by{|item| item['num']}.reverse_each do |quadro| %>
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <center><strong>Composição #<%= quadro.num %> (<%= quadro.ano %>)</strong></center>
+        </div>
+        <div class="panel-body ">
+          <center>
+            <%= link_to(quadro) do %>
+              <%= image_tag quadro.foto.url(:square), class:"show-image"  %>
+            <% end %>
+          </center>
+        </div>
+        <div class="panel-footer ">
+          <center>
+            <%= quadro.alt %>cm x <%= quadro.larg %>cm - <%= quadro.tec %>
+          </center>
+        </div>
+      </div>
+
+    </div>
+      
+    <% end %>
+  </div>
+</div>

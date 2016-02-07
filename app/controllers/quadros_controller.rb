@@ -1,5 +1,6 @@
 class QuadrosController < ApplicationController
   before_action :set_quadro, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:show, :galeria]
 
   # GET /quadros
   # GET /quadros.json
@@ -11,14 +12,20 @@ class QuadrosController < ApplicationController
   # GET /quadros/1.json
   def show
   end
-
+  
+  def galeria
+    @quadros = Quadro.all
+  end
+  
   # GET /quadros/new
   def new
     @quadro = Quadro.new
+    @locais = Local.all
   end
 
   # GET /quadros/1/edit
   def edit
+    @locais = Local.all
   end
 
   # POST /quadros
@@ -69,6 +76,6 @@ class QuadrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quadro_params
-      params.require(:quadro).permit(:num, :alt, :larg, :tec, :price, :ano, :onde, :img, :foto)
+      params.require(:quadro).permit(:num, :alt, :larg, :tec, :price, :ano, :local_id, :galeria, :foto, local_attributes: [:id, :name, :city, :desc])
     end
 end

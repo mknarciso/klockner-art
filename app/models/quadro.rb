@@ -1,4 +1,6 @@
 class Quadro < ActiveRecord::Base
+    belongs_to :local
+    accepts_nested_attributes_for :local
     
     has_attached_file :foto, styles: {
         large: '1600x800>',

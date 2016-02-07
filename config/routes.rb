@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  resources :locals
   resources :quadros
   root 'pages#home'
   get 'home', to: 'pages#home'
   get 'sobre', to: 'pages#sobre'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to:'sessions#destroy'
+  get 'galeria', to: 'quadros#galeria'
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

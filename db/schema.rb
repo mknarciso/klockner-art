@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160206212739) do
+ActiveRecord::Schema.define(version: 20160206235135) do
+
+  create_table "locals", force: :cascade do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "quadros", force: :cascade do |t|
     t.integer  "num"
@@ -20,14 +28,14 @@ ActiveRecord::Schema.define(version: 20160206212739) do
     t.string   "tec"
     t.integer  "price"
     t.integer  "ano"
-    t.integer  "onde"
-    t.string   "img"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "foto_file_name"
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+    t.integer  "local_id"
+    t.boolean  "galeria",           default: true
   end
 
   create_table "users", force: :cascade do |t|

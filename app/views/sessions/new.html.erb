@@ -1,0 +1,10 @@
+<div class="container">
+      <center>
+        <h1>Log in</h1>
+      </center>  
+    <%= form_for(:session, :html => { class: "form-horizontal" }, url: login_path) do |f| %>
+        <%= f.text_field :username, class: "col-sm-5", placeholder: "Username" %>
+        <%= f.password_field :password, class: "col-sm-5", placeholder: "Password", autocomplete: "off" %>
+        <%= f.submit "Log in", class: "col-sm-2 btn btn-default" %>
+    <% end %>
+</div>

@@ -6,6 +6,9 @@ gem 'rails', '4.2.5'
 
 gem 'bcrypt', '~>3.1.7'
 
+# AWS S3 Amazon
+gem 'aws-sdk', '~> 2'
+
 gem 'bootstrap-sass', '~> 3.3.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

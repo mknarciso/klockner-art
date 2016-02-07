@@ -6,11 +6,17 @@
       <% end %>
     </div>
     <div class="my-nav col-sm-8">
-        <%= link_to 'Galeria', quadros_path, class: "menu-item" %>
+        <%= link_to 'Galeria', galeria_path, class: "menu-item" %>
         |
         <%= link_to 'Sobre', sobre_path , class: "menu-item" %>
         |
         <%= link_to 'Contato', "#", class: "menu-item" %>
+        <% if logged_in? %>
+        |
+        <%= link_to 'Quadros', quadros_path, class: "menu-item" %>
+        |
+        <%= link_to 'Log out', logout_path, method: :delete, class: "menu-item"  %>
+        <% end %>
     </div>
     <div class="col-sm-1 my-nav">
         <%= link_to "https://www.facebook.com/klockner.art" do %>
