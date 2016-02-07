@@ -19,3 +19,9 @@
 # Ignore Images
 
 /public/system/quadros/
+
+# Mailer Login
+/config/initializers/app_env_vars.rb
+
+.env
+Procfile

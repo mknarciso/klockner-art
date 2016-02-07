@@ -9,6 +9,10 @@ gem 'bcrypt', '~>3.1.7'
 # AWS S3 Amazon
 gem 'aws-sdk', '~> 2'
 
+# Mailer
+gem 'mail_form'
+gem 'simple_form'
+
 gem 'bootstrap-sass', '~> 3.3.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -44,6 +48,8 @@ group :development, :test do
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  
+  gem 'foreman'
 end
 
 group :development do

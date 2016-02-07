@@ -4,10 +4,14 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'home', to: 'pages#home'
   get 'sobre', to: 'pages#sobre'
+  get 'contato', to: 'pages#contato'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to:'sessions#destroy'
   get 'galeria', to: 'quadros#galeria'
+  
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

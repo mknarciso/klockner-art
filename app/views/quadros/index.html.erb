@@ -24,7 +24,7 @@
     </thead>
   
     <tbody>
-      <% @quadros.each do |quadro| %>
+      <% @quadros.sort_by{|item| item['num']}.reverse_each do |quadro| %>
         <tr>
           
           <td style="vertical-align: middle;">

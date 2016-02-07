@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="contato-header col-sm-12">
+    </div>
+    <div class="contato-body col-sm-12">
+        <div class="container">
+            <div class="col-sm-7" style="text-align: justify;">
+                
+                <h2>
+                    Irineide Klöckner
+                </h2>
+                </br>
+                <p>
+                    Maringá / PR </br>
+                    (44)9948-7785 / (44)3265-4855 
+                 </p>
+                 </br>
+                <p>
+                    Lodrina / PR (Wagner)</br>
+                    (43)9612-7090
+                 </p>
+                 </br>
+                <p>
+                    São José dos Campos / SP (Murilo) </br>
+                    (12)98229-0060 - murilokn@gmail.com</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="contato-form col-sm-4 col-sm-offset-5 container">
+        <div>
+          <% flash.each do |key, value| %>
+            <div>
+              <a href="#" data-dismiss="alert">×</a>
+                <%= value %>
+            </div>
+          <% end %>
+        </div>
+    </div>
+</div>
+
