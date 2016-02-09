@@ -40,7 +40,7 @@
           <td style="vertical-align: middle;"><%= quadro.ano %></td>
           <td style="vertical-align: middle;"><% if quadro.galeria %><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><% end %></td>
           <td style="vertical-align: middle;"><% if quadro.vendido %><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><% end %></td>
-          <td style="vertical-align: middle;"><% if quadro.link %><%= link_to "Ver na Elo7", quadro.link %><% end %></td>
+          <td style="vertical-align: middle;"><% if if @quadro.link && @quadro.link != "" %><%= link_to "Ver na Elo7", quadro.link %><% end %></td>
           <td style="vertical-align: middle;">
             <% if quadro.local %>
               <%= quadro.local.name %>
