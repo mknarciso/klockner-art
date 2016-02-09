@@ -25,7 +25,7 @@
           <%= @quadro.local.desc %>
         </p>
       <% end %>
-      <% if @quadro.link %>
+      <% if @quadro.link && @quadro.link != "" %>
         <%= link_to "Ver na Loja", @quadro.link, class: "btn btn-sm btn-success" %>
       <% end %>
     </center>
