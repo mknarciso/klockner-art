@@ -7,7 +7,7 @@ gem 'rails', '4.2.5'
 gem 'bcrypt', '~>3.1.7'
 
 # AWS S3 Amazon
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '< 2'
 
 # Mailer
 gem 'mail_form'
