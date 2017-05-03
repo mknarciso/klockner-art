@@ -6,7 +6,7 @@
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <% i=0 %>
-      <% @quadros.where(galeria: true).sort_by{|item| item['num']}.reverse_each do |quadro| %>
+      <% @show.sort_by{|item| item['num']}.each do |quadro| %>
         <li data-target="#gallery-corousel" data-slide-to="<%= i %>" <%= raw 'class="active"' if i==0 %>></li>
         <% i=i+1 %>
       <% end %>
