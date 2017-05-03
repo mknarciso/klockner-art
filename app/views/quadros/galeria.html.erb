@@ -15,7 +15,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <% i=0 %>
-      <% @quadros.where(galeria: true).sort_by{|item| item['num']}.reverse_each do |quadro| %>
+      <% @show.sort_by{|item| item['num']}.each do |quadro| %>
         <div class="item <%= "active" if i==0 %>">
           <%= link_to quadro do %>
             <center><%= image_tag quadro.foto.url(:large), class: "carousel-img" %></center>

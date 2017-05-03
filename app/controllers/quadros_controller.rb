@@ -15,6 +15,7 @@ class QuadrosController < ApplicationController
   
   def galeria
     @quadros = Quadro.all
+    @show = Quadro.where(galeria: true, vendido: false).last(4)
   end
   
   # GET /quadros/new
