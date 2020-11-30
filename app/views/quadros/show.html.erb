@@ -26,6 +26,9 @@
         </p>
       <% end %>
       <% if @quadro.link && @quadro.link != "" %>
+        <% unless @quadro.blank? %>
+          <p><strong>R$ <%= @quadro.price %>,00</p></strong>
+        <% end %>
         <%= link_to "Ver na Loja", @quadro.link, class: "btn btn-sm btn-success" %>
       <% end %>
     </center>

@@ -14,7 +14,7 @@ class QuadrosController < ApplicationController
   end
   
   def galeria
-    @quadros = Quadro.all
+    @quadros = Quadro.all.order("vendido ASC")
     @show = Quadro.where(galeria: true, vendido: false).last(4)
   end
   
