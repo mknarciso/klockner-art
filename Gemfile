@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Image Handling
-gem 'paperclip', '~> 4.3', '>= 4.3.2'
+gem 'paperclip', '~> 5.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
