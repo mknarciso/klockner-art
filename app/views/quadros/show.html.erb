@@ -20,16 +20,14 @@
   <div class="panel-footer ">
     <center>
       <%= @quadro.alt %>cm x <%= @quadro.larg %>cm - <%= @quadro.tec %>
-      <% if (!@quadro.vendido && @quadro.local != nil ) %>
-        <p>
-          <%= @quadro.local.desc %>
-        </p>
-      <% end %>
-      <% if @quadro.link && @quadro.link != "" %>
-        <% unless @quadro.blank? %>
-          <p><strong>R$ <%= @quadro.price %>,00</p></strong>
+      <% unless @quadro.vendido %> 
+        <%= content_tag(:p, @quadro.local.desc) unless @quadro.local.nil? %>
+        <%= content_tag(:p,content_tag(:strong, "R$ #{ @quadro.price },00")) unless @quadro.price.blank? %>
+        <% unless @quadro.link.blank? %>
+          <%= link_to("Ver na Loja", @quadro.link, class: "btn btn-sm btn-success") %>
+        <% else %>
+          <%= link_to("Entrar em contato", contacts_path, class: "btn btn-sm btn-success") %>
         <% end %>
-        <%= link_to "Ver na Loja", @quadro.link, class: "btn btn-sm btn-success" %>
       <% end %>
     </center>
   </div>
