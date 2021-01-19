@@ -1,67 +1,38 @@
 <div class="container">
-    <div class="contato-header col-sm-12">
+  <div class="contato-header col-sm-12"></div>
+  <div class="contato-body col-sm-12">
+    <div class="container">
+      <div class="col-sm-7" style="text-align: justify;">
+        <h2>
+          Contato
+        </h2>
+        <br>
+        <p>
+          Maringá / PR <br>
+          (44) 99948-7785
+        </p>
+        <br>
+        <p>
+          Lodrina / PR<br>
+          (43) 99612-7090
+        </p>
+        <br>
+        <p>
+          E-mail<br>
+          <a href="mailto:klockner.art@gmail.com">klockner.art@gmail.com</a>
+        </p>
+      </div>
     </div>
-    <div class="contato-body col-sm-12">
-        <div class="container">
-            <div class="col-sm-7" style="text-align: justify;">
-                
-                <h2>
-                    Irineide Klöckner
-                </h2>
-                </br>
-                <p>
-                    Maringá / PR </br>
-                    (44)99948-7785 / (44)3265-4855 
-                 </p>
-                 </br>
-                <p>
-                    Lodrina / PR (Wagner)</br>
-                    (43)99612-7090
-                 </p>
-                 </br>
-                <p>
-                    São José dos Campos / SP (Murilo) </br>
-                    murilokn@gmail.com</p>
-                <p></p>
-            </div>
-        </div>
-    </div>
-    <div class="contato-form col-sm-4 col-sm-offset-5 container">
-        <div class="alert">
-          <% flash.each do |key, value| %>
-            <div>
-              <a href="#" data-dismiss="alert">×</a>
-                <%= value %>
-            </div>
-          <% end %>
-        </div>
-      <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-          <h3 class="col-sm-offset-1">Entre em contato</h3>
-          <div class="form-group">
-            <p class=" col-sm-offset-1">Nome</p>
-            <%= f.text_field :name, :required => true, class: "col-sm-10 col-sm-offset-1"%>
-          </div>
-          <div class="form-group">
-            <p class=" col-sm-offset-1">E-mail</p>
-            <%= f.text_field :email, :required => true, class: "col-sm-10 col-sm-offset-1"%>
-          </div>
-          <div class="form-group">            
-            <p class=" col-sm-offset-1">Assunto</p>
-            <%= f.text_field :assunto, :required => true, class: "col-sm-10 col-sm-offset-1"%>
-          </div>
-          <div class="form-group">
-            <p class=" col-sm-offset-1">Mensagem</p>
-            <%= f.text_area :message, :as => :text, :required => true, class: "col-sm-10 col-sm-offset-1"%>
-          </div>
-          <div class="form-group">
-            <div class= "hidden">
-              <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-            </div>
-            <div class="actions">
-              </br>
-              <%= f.button :submit, "Enviar", :class=> "btn btn-primary col-sm-offset-1" %>
-            </div>
-          </div>
-      <% end %>
-    </div>
+  </div>
+  <div class="contato-form col-sm-4 col-sm-offset-5 container">
+    <h2>
+      Fale direto pelo WhatsApp
+    </h2>
+    <br>
+    <p>
+      Clique no botão abaixo para enviar uma mensagem diretamente ao nosso WhatsApp
+    </p>
+    <br><br>
+    <a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?phone=5543996127090">Enviar mensagem</a>
+  </div>
 </div>
