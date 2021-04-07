@@ -55,7 +55,12 @@
         </div>
         <div class="panel-body ">
           <% if !quadro.vendido %>
-            <span class="label label-success corner">Disponível</span>
+            <span class="label label-success corner">
+              Disponível
+              <% unless quadro.price.blank? %>
+                 - R$<%= quadro.price %>,00
+              <% end %>
+            </span>
           <% end %>
           <center>
             <%= link_to(quadro) do %>
